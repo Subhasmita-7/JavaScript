@@ -15,4 +15,17 @@ console.log("a,b,c: ",a,b,c)
 b=2
 console.table([a,b,c])
 
+
+
+
+
+// DATA TYPES
+//number => 2 to power 53
+//string => ""
+//boolean => true/false
+//null => standalone value
+//undefined =>
+//symbol => unique
+console.log(typeof undefined)
+console.log(typeof null)
 console.log(typeof b)

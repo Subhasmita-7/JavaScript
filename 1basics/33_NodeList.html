@@ -14,21 +14,36 @@
     </div>
 </body>
 <script>
-    const parent = document.querySelector('.parent')
-    console.log(parent)
-    console.log(parent.children[2])
-    console.log(parent.children[2].innerHTML)
+    // const parent = document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children[2])
+    // console.log(parent.children[2].innerHTML)
 
-    for(i=0 ; i<parent.children.length ; i++){
-        console.log(parent.children[i].innerHTML)
+    // for(i=0 ; i<parent.children.length ; i++){
+    //     console.log(parent.children[i].innerHTML)
+    // }
+
+    // parent.children[2].style.color = "pink";
+    // console.log(parent.firstElementChild)
+
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
+    // console.log("NODES:" , parent.childNodes)
+    const c = ["red","green","pink"]
+    const t = ["lisa","priya","mocha"]
+    function change(co,te){
+        const div = document.createElement('div')
+        div.className = "divone"
+        div.id = "o"
+        const text = document.createTextNode(te)
+        div.appendChild(text)
+        div.style.color = co
+        document.body.appendChild(div)
     }
-
-    parent.children[2].style.color = "pink";
-    console.log(parent.firstElementChild)
-
-    const dayOne = document.querySelector('.day')
-    console.log(dayOne.parentElement)
-    console.log(dayOne.nextElementSibling)
-    console.log("NODES:" , parent.childNodes)
+    for(let i=0 ; i<c.length ; i++){
+        change(c[i],t[i])
+    }
+    
 </script>
 </html>

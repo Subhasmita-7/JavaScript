@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //**Adding li elements/**
+    function add(lang){
+        const li = document.createElement('li')
+        li.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    add('C++')
+    function opti(l){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(l))
+        document.querySelector('.language').appendChild(li)
+    }
+    opti('Python')
+
+    //**edit**
+    const prev = document.querySelector("li:nth-child(2)")
+    console.log(prev)
+    const cur = document.createElement('li')
+    cur.textContent='C'
+    prev.replaceWith(cur)
+
+    //**remove**
+    const last = document.querySelector("li:nth-child(2)")
+    last.remove()
+</script>
+</html>
